@@ -67,7 +67,8 @@
       padding:18px;
     }
     .thumb{display:block; margin:12px auto; border-radius:12px; box-shadow:var(--shadow); width:100%; max-width:520px;}
-    video{width:100%; border-radius:12px; box-shadow:var(--shadow)}
+    .video-embed{width:50%; border-radius:12px; box-shadow:var(--shadow)}
+    @media (max-width:860px){ .video-embed{width:100%;} } /* 手機改滿版 */
     .langtab{display:flex; gap:8px; margin-bottom:12px; border-bottom:1px solid var(--border); padding-bottom:8px;}
     .tab{
       border:1px solid var(--border); background:transparent; color:var(--fg);
@@ -156,7 +157,7 @@
 </ul>
           <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" alt="Cash Booster Icon">
           
-          <video autoplay loop muted playsinline
+          <video class="video-embed" autoplay loop muted playsinline
                  poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" width="50%">
             <source src="https://funkygamessupport.github.io/FunkyGames/videos/Cash_Booster_Wheel.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -173,7 +174,7 @@
 </ul>
           <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" alt="金鈔狂潮 遊戲圖示">
           
-          <video autoplay loop muted playsinline
+          <video class="video-embed" autoplay loop muted playsinline
                  poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" width="50%">
             <source src="https://funkygamessupport.github.io/FunkyGames/videos/Cash_Booster_Wheel.mp4" type="video/mp4">
             您的瀏覽器不支援影片播放。
