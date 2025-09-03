@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
   <!-- Link previews -->
   <meta property="og:title" content="💰 Fortune Booster - Funky Games">
   <meta property="og:description" content="Fortune Booster is a classic slot-style game that brings fast-paced spins and high-energy action to the screen. With simple number combinations and explosive bonus opportunities, this game offers thrills with every spin. Will you take the risk">
-  <meta property="og:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png">
+  <meta property="og:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/1902625.png">
   <meta property="og:url" content="https://funkygames.io/demo?gameCode=1902622&lang=EN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -67,7 +67,16 @@
       padding:18px;
     }
     .thumb{display:block; margin:12px auto; border-radius:12px; box-shadow:var(--shadow); width:100%; max-width:520px;}
-    video{width:100%; border-radius:12px; box-shadow:var(--shadow)}
+    .video-embed {
+        display: block;       /* 讓 <video> 變成區塊元素 */
+        margin: 20px auto;    /* 上下 20px，左右 auto 就會置中 */
+        width: 50%;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+    }
+    @media (max-width:860px){
+       .video-embed{ width:100%; }
+    }
     .langtab{display:flex; gap:8px; margin-bottom:12px; border-bottom:1px solid var(--border); padding-bottom:8px;}
     .tab{
       border:1px solid var(--border); background:transparent; color:var(--fg);
@@ -103,7 +112,7 @@
     <header>
       <img src="https://funkygamessupport.github.io/FunkyGames/FG_logo-03.png" alt="Funky Games" />
       <div class="title">
-        <h1>💰 Fortune Booster</h1>
+        <h1>💰Fortune Booster</h1>
         <span class="badge">New Game</span>
       </div>
     </header>
@@ -113,7 +122,7 @@
       <div class="card">
         <h3>Game Code</h3>
         <div class="val">1902622</div>
-        <button class="copy" data-copy="1902622" aria-label="Copy Game Code">Copy</button>
+        <button class="btn primary copy" data-copy="1902622" aria-label="Copy Game Code">Copy</button>
       </div>
       <div class="card">
         <h3>Type</h3>
@@ -121,7 +130,7 @@
       </div>
       <div class="card">
         <h3>RTP</h3>
-        <div class="val">0.96</div>
+        <div class="val">96%</div>
       </div>
       <div class="card">
         <h3>Max Pay</h3>
@@ -147,6 +156,7 @@
         </div>
 
         <div id="pane-en" role="tabpanel" aria-labelledby="tab-en">
+          <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902625.png" alt="Fortune Booster Icon">
           <p><strong>Fortune Booster</strong> is a classic, fast-paced slot with simple number combos and explosive bonus opportunities. It’s built for quick comprehension and sticky engagement—ideal for post-launch promos and retention pushes.</p>
           <h3>Feature Highlights</h3>
           <ul>
@@ -154,16 +164,17 @@
   <li>Wheel Bonus Game – Land 3 Bonus symbols to trigger the Cash Out Wheel, where huge multipliers await!</li>
   <li>Gamble Feature – After any win, try your luck on Red or Black to double your prize—or lose it all!</li>
 </ul>
-          <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" alt="Fortune Booster Icon">
           
-          <video autoplay loop muted playsinline
-                 poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png">
+          
+          <video class="video-embed" autoplay loop muted playsinline
+                 poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902625.png">
             <source src="https://funkygamessupport.github.io/FunkyGames/videos/Cash_Booster_Wheel.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
 
         <div id="pane-zh" role="tabpanel" aria-labelledby="tab-zh" hidden>
+          <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902625.png" alt="金鈔狂潮 遊戲圖示">
           <p><strong>金鈔狂潮</strong> 為經典風格、節奏明快的老虎機，數字組合清楚好懂，搭配爆發性的加碼機制，適合用於上線後的推廣與留存活動。</p>
           <h3>遊戲特色</h3>
           <ul>
@@ -171,10 +182,10 @@
   <li>輪盤 Bonus 遊戲 – 轉出 3 個 Bonus 圖示即可進入「Cash Out 獎金輪盤」，最高可中驚人倍數！</li>
   <li>紅黑挑戰賭博 – 中獎後可選紅或黑，成功就贏雙倍，失敗獎金歸零！</li>
 </ul>
-          <img class="thumb" src="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png" alt="金鈔狂潮 遊戲圖示">
           
-          <video autoplay loop muted playsinline
-                 poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902622_icon.png">
+          
+          <video class="video-embed" autoplay loop muted playsinline
+                 poster="https://funkygamessupport.github.io/FunkyGames/images/icons/1902625.png">
             <source src="https://funkygamessupport.github.io/FunkyGames/videos/Cash_Booster_Wheel.mp4" type="video/mp4">
             您的瀏覽器不支援影片播放。
           </video>
@@ -188,7 +199,7 @@
           <div>Game Code</div><div>1902622</div>
           <div>Name (EN/ZH)</div><div>Fortune Booster / 金鈔狂潮</div>
           <div>Type</div><div>Slot</div>
-          <div>RTP</div><div>0.96</div>
+          <div>RTP</div><div>96%</div>
           <div>Max Pay</div><div>1000X</div>
           <div>Demo</div><div><a target="_blank" rel="noopener" href="https://funkygames.io/demo?gameCode=1902622&lang=EN">Open demo</a></div>
           <div>Materials</div><div><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1emZt5x8YYUL3ykihSwM3-v_rrI7ae5eT?usp=sharing">Download pack</a></div>
