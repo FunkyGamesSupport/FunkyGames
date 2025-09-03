@@ -67,8 +67,16 @@
       padding:18px;
     }
     .thumb{display:block; margin:12px auto; border-radius:12px; box-shadow:var(--shadow); width:100%; max-width:520px;}
-    .video-embed{width:50%; border-radius:12px; box-shadow:var(--shadow)}
-    @media (max-width:860px){ .video-embed{width:100%;} } /* 手機改滿版 */
+    .video-embed {
+        display: block;       /* 讓 <video> 變成區塊元素 */
+        margin: 20px auto;    /* 上下 20px，左右 auto 就會置中 */
+        width: 50%;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+    }
+    @media (max-width:860px){
+       .video-embed{ width:100%; }
+    }
     .langtab{display:flex; gap:8px; margin-bottom:12px; border-bottom:1px solid var(--border); padding-bottom:8px;}
     .tab{
       border:1px solid var(--border); background:transparent; color:var(--fg);
