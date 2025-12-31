@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026 - Funky Games</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="🎆 Happy New Year 2026 from Funky Games!">
+    <meta property="og:description" content="迎接全新的 2026！願新的一年充滿喜悅與冒險。新年快樂！">
+    <meta property="og:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/2026NewYear_banner_1400x875_en.jpg">
+    <meta property="og:url" content="https://funkygamessupport.github.io/FunkyGames/NewYear.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🎆 Happy New Year 2026 from Funky Games!">
+    <meta name="twitter:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/2026NewYear_banner_1400x875_en.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle, #1a1a2e 0%, #0f0f1a 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .cursive {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .image-card {
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: scale(1.02);
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center">
+
+    <!-- Fireworks Effect Canvas -->
+    <canvas id="fireworks" class="fireworks-container"></canvas>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-5xl px-6 py-12 text-center">
+        
+        <!-- Greeting Header -->
+        <header class="mb-12 animate-fade-in">
+            <h1 class="cursive text-7xl md:text-9xl text-yellow-500 mb-4 gold-glow">
+                Happy New Year
+            </h1>
+            <div class="flex items-center justify-center space-x-4">
+                <span class="h-px w-12 bg-yellow-600/50"></span>
+                <p class="text-2xl md:text-3xl text-white font-bold tracking-[0.5em]">2026</p>
+                <span class="h-px w-12 bg-yellow-600/50"></span>
+            </div>
+            <p class="mt-4 text-sm md:text-base text-gray-400 tracking-[0.3em] uppercase font-light">
+                Presented by Funky Games
+            </p>
+        </header>
+
+        <!-- Main Banner Image -->
+        <div class="mb-12 rounded-3xl overflow-hidden image-card bg-black/40">
+            <img src="https://funkygamessupport.github.io/FunkyGames/images/icons/2026NewYear_banner_1400x875_en.jpg" 
+                 alt="2026 New Year Banner" 
+                 class="w-full h-auto block"
+                 onerror="this.src='https://placehold.co/1400x875/1a1a2e/ffd700?text=Happy+New+Year+2026'">
+        </div>
+
+        <!-- Celebration Message -->
+        <div class="max-w-2xl mx-auto space-y-8 mb-16">
+            <p class="text-xl md:text-3xl text-gray-100 font-light leading-relaxed">
+                "新的一年，新的冒險。<br>願您的 2026 充滿勝利與精彩瞬間！"
+            </p>
+            <div class="w-32 h-px bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto"></div>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                感謝您在過去一年的陪伴。Funky Games 團隊祝您在未來的日子裡，事業蒸蒸日上，生活精彩紛呈。讓我們一起迎接更亮眼的 2026！
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-12 text-gray-500 text-xs tracking-widest uppercase">
+        &copy; 2026 Funky Games &bull; 新年快樂 &bull; Prosperity & Joy
+    </footer>
+
+    <!-- Fireworks Script -->
+    <script>
+        const canvas = document.getElementById('fireworks');
+        const ctx = canvas.getContext('2d');
+        
+        let particles = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.friction = 0.95;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+
+            update() {
+                this.velocity.x *= this.friction;
+                this.velocity.y *= this.friction;
+                this.velocity.y += 0.05; // gravity
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= 0.01;
+            }
+        }
+
+        function createFirework() {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * (canvas.height * 0.5);
+            const colors = ['#FFD700', '#FFA500', '#FFFFFF', '#FF4500'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            for (let i = 0; i < 30; i++) {
+                particles.push(new Particle(x, y, color));
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.fillStyle = 'rgba(15, 15, 26, 0.2)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach((particle, index) => {
+                if (particle.alpha > 0) {
+                    particle.update();
+                    particle.draw();
+                } else {
+                    particles.splice(index, 1);
+                }
+            });
+
+            if (Math.random() < 0.05) {
+                createFirework();
+            }
+        }
+
+        window.onload = animate;
+    </script>
+</body>
+</html>
