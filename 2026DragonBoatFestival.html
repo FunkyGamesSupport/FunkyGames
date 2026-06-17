@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunkyGames - Dragon Boat Festival Announcement</title>
+    <style>
+        :root {
+            --primary-color: #6c28d9;
+            --secondary-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Banner Style */
+        .banner-container {
+            width: 100%;
+            display: block;
+            background: #111827;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 50px 60px;
+        }
+
+        .lang-block {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #e5e7eb;
+        }
+
+        .lang-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .lang-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #111827;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+
+        .main-text {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+            color: #166534;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .signature {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 0;
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+            .content-section {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="banner-container">
+            <img class="banner-img" src="260611_DragonBoatFestival_banner_1400x875.jpg" alt="FunkyGames Dragon Boat Festival 2026">
+        </div>
+
+        <div class="content-section">
+            
+            <div class="lang-block">
+                <span class="lang-badge">ENGLISH</span>
+                <h1>[Announcement] Holiday Notice</h1>
+                <p class="greeting">Dear valued customers,</p>
+                <p class="main-text">Happy Dragon Boat Festival 🐉🎉</p>
+                <p class="main-text">Please be informed that we will be having a national holiday from <strong>Jun 18th 18:00 PM to June 21st</strong>.</p>
+                
+                <div class="highlight-box">
+                    💡 We assure you that all integration technical inquiries will be answered as soon as we return, and the <strong>24/7 technical issue support</strong> will remain available during this period.
+                </div>
+
+                <p class="main-text">We apologize for any inconvenience this may cause, and thank you for your understanding.</p>
+                
+                <div class="closing">
+                    <p>Sincerely,</p>
+                    <p class="signature">FunkyGames Team</p>
+                </div>
+            </div>
+
+            <div class="lang-block">
+                <span class="lang-badge">简体中文</span>
+                <h1>[公告] 端午节休假通知</h1>
+                <p class="greeting">亲爱的客户您好，</p>
+                <p class="main-text">端午节即将到来，Funky Games 团队预祝您端午节快乐！🎊🐉</p>
+                <p class="main-text">我们即将在 <strong>6月19日 18:00 PM 至 6月21日</strong> 迎接端午节国定假日。</p>
+                
+                <div class="highlight-box">
+                    💡 在此期间，技术介接咨询将会暂停，但 <strong>24/7 技术问题支援服务</strong> 仍会持续提供。
+                </div>
+
+                <p class="main-text">若造成您的不便敬请见谅，感谢您的理解与支持。</p>
+                
+                <div class="closing">
+                    <p>谨贺端午，佳节安愉！</p>
+                    <p class="signature">FunkyGames 团队</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 FunkyGames. All rights reserved. | business@funkygamesltd.com
+    </footer>
+
+</body>
+</html>
