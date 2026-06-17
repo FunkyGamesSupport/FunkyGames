@@ -1,216 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Chinese New Year 2026 · 农历新年快乐</title>
-    
-    <!-- Open Graph (Facebook, LINE, WhatsApp, Telegram, etc.) -->
+    <title>FunkyGames - Dragon Boat Festival Announcement</title>
+
+    <!-- Open Graph (Facebook, LINE, WhatsApp, Telegram, Teams, etc.) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="🐴 Happy Chinese New Year 2026! 农历新年快乐">
-    <meta property="og:description" content="Wishing you prosperity and joy. 恭贺新禧，马到成功！Happy Lunar New Year!">
-    <!-- 替換為您的公告頁完整網址 -->
-    <meta property="og:url" content="https://your-domain.com/cny2026">
-    <meta property="og:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/ChineseNewYear_banner_1400x875_en.jpg">
+    <meta property="og:title" content="🐉 Happy Dragon Boat Festival! 端午节快乐">
+    <meta property="og:description" content="FunkyGames holiday notice: Jun 18/19 - Jun 21. 24/7 technical support remains available. 祝您端午安康！">
+    <!-- ⬇️ 請將下方 content 替換為您本次端午節公告頁的完整網址，預覽圖才能正常顯示 -->
+    <meta property="og:url" content="https://你的網址.github.io/你的專案路徑">
+    <!-- ⬇️ 這裡直接套用相對路徑的端午節圖檔 -->
+    <meta property="og:image" content="260611_DragonBoatFestival_banner_1400x875.png">
     <meta property="og:image:width" content="1400">
     <meta property="og:image:height" content="875">
-    <meta property="og:image:alt" content="Happy Chinese New Year 2026 - Year of the Horse">
-    <meta property="og:site_name" content="Happy Chinese New Year 2026">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:image:alt" content="Happy Dragon Boat Festival 2026 - FunkyGames">
+    <meta property="og:site_name" content="FunkyGames Holiday Notice">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="🐴 Happy Chinese New Year 2026! 农历新年快乐">
-    <meta name="twitter:description" content="Wishing you prosperity and joy. 恭贺新禧，马到成功！Happy Lunar New Year!">
-    <meta name="twitter:image" content="https://funkygamessupport.github.io/FunkyGames/images/icons/ChineseNewYear_banner_1400x875_en.jpg">
-    <meta name="twitter:image:alt" content="Happy Chinese New Year 2026 - Year of the Horse">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;700&display=swap');
-        
+        :root {
+            --primary-color: #6c28d9;
+            --secondary-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            font-family: 'Inter', 'Noto Serif SC', sans-serif;
-            background: radial-gradient(circle at 30% 20%, #1a0505 0%, #2d0a0a 40%, #1a0505 100%);
-            color: #fff;
-            overflow-x: hidden;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            padding-bottom: 60px;
         }
 
-        .chinese-title {
-            font-family: 'Noto Serif SC', serif;
-            font-weight: 700;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
-        .lantern-container {
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* Banner Style */
+        .banner-container {
             width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
+            display: block;
+            background: #111827;
         }
 
-        .gold-glow {
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 200, 0, 0.4);
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        .red-glow {
-            text-shadow: 0 0 15px rgba(220, 38, 38, 0.5);
+        /* Content Sections */
+        .content-section {
+            padding: 50px 60px;
         }
 
-        .image-card {
-            box-shadow: 0 0 50px rgba(220, 38, 38, 0.25), 0 0 30px rgba(255, 215, 0, 0.15);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+        .lang-block {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #e5e7eb;
         }
 
-        .lantern {
-            position: absolute;
-            width: 12px;
-            height: 18px;
-            background: linear-gradient(180deg, #dc2626 0%, #b91c1c 50%, #dc2626 100%);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.2);
-            animation: sway 3s ease-in-out infinite;
-        }
-        .lantern::before {
-            content: '';
-            position: absolute;
-            top: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 14px;
-            height: 5px;
-            background: #fbbf24;
-            border-radius: 2px;
-        }
-        @keyframes sway {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
+        .lang-block:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .coin {
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fde047, #eab308 40%, #ca8a04);
-            box-shadow: 0 0 10px rgba(234, 179, 8, 0.6), inset -2px -2px 4px rgba(0,0,0,0.2);
-            font-size: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #78350f;
+        .lang-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #111827;
+            margin-bottom: 25px;
             font-weight: 700;
+        }
+
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+
+        .main-text {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+            color: #166534;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            color: var(--text-light);
+        }
+
+        .signature {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 0;
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+            .content-section {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center">
+<body>
 
-    <!-- Lantern & Coin Fall Effect -->
-    <div id="lanterns" class="lantern-container"></div>
-
-    <!-- Main Content -->
-    <main class="relative z-10 w-full max-w-4xl px-6 py-10 text-center">
-        
-        <!-- Greeting Header -->
-        <header class="mb-10">
-            <p class="text-amber-400/90 text-sm md:text-base tracking-[0.4em] mb-2 font-light">
-                Year of the Horse · 丙午年 · 马年
-            </p>
-            <h1 class="text-5xl md:text-7xl text-amber-400 mb-2 gold-glow font-bold">
-                Happy Chinese New Year
-            </h1>
-            <p class="text-3xl md:text-4xl text-amber-500/95 mb-3 font-light">
-                2026
-            </p>
-            <p class="chinese-title text-2xl md:text-3xl text-red-400 red-glow">
-                新年快乐 · 恭贺新禧
-            </p>
-        </header>
-
-        <!-- Main Festive Banner Area -->
-        <div class="mb-12 rounded-3xl overflow-hidden image-card bg-black/20 p-2">
-            <img src="https://funkygamessupport.github.io/FunkyGames/images/icons/ChineseNewYear_banner_1400x875_en.jpg" alt="Happy Chinese New Year 2026 - Year of the Horse" class="w-full h-full object-cover">
+    <div class="container">
+        <!-- 主视觉 Banner 区域 -->
+        <div class="banner-container">
+            <img class="banner-img" src="260611_DragonBoatFestival_banner_1400x875.png" alt="FunkyGames Dragon Boat Festival 2026">
         </div>
 
-        <!-- Warm Message -->
-        <div class="max-w-2xl mx-auto space-y-6 mb-12">
-            <p class="text-xl md:text-2xl text-amber-100 font-light italic">
-                "Wishing you health, prosperity, and success in the Year of the Horse."
-            </p>
-            <p class="chinese-title text-lg md:text-xl text-amber-200/80">
-                阖家安康，万事如意，马到成功。
-            </p>
-            <div class="w-24 h-px bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto"></div>
-            <p class="text-gray-300 leading-relaxed">
-                Thank you for your support and companionship. We wish you and your family a joyful Lunar New Year and a hopeful 2026!
-            </p>
-            <p class="text-gray-400 text-sm md:text-base">
-                感谢您一路以来的支持与陪伴。敬祝您与家人新春愉快、心想事成，迎接充满希望的二零二六！
-            </p>
+        <!-- 公告内文区域 -->
+        <div class="content-section">
+            
+            <!-- 英文公告 -->
+            <div class="lang-block">
+                <h1>[Announcement] Holiday Notice</h1>
+                <p class="greeting">Dear valued customers,</p>
+                <p class="main-text">Happy Dragon Boat Festival 🐉🎉</p>
+                <p class="main-text">Please be informed that we will be having a national holiday from <strong>Jun 18th 18:00 PM to June 21st</strong>.</p>
+                
+                <div class="highlight-box">
+                    💡 We assure you that all integration technical inquiries will be answered as soon as we return, and the <strong>24/7 technical issue support</strong> will remain available during this period.
+                </div>
+
+                <p class="main-text">We apologize for any inconvenience this may cause, and thank you for your understanding.</p>
+                
+                <div class="closing">
+                    <p>Sincerely,</p>
+                    <p class="signature">FunkyGames Team</p>
+                </div>
+            </div>
+
+            <!-- 简体中文公告 -->
+            <div class="lang-block">
+                <h1>[公告] 端午节休假通知</h1>
+                <p class="greeting">亲爱的客户您好，</p>
+                <p class="main-text">端午节即将到来，Funky Games 团队预祝您端午节快乐！🎊🐉</p>
+                <p class="main-text">我们即将在 <strong>6月18日 18:00 PM 至 6月21日</strong> 迎接端午节国定假日。</p>
+                
+                <div class="highlight-box">
+                    💡 在此期间，技术介接咨询将会暂停，但 <strong>24/7 技术问题支援服务</strong> 仍会持续提供。
+                </div>
+
+                <p class="main-text">若造成您的不便敬请见谅，感谢您的理解与支持。</p>
+                
+                <div class="closing">
+                    <p>谨贺端午，佳节安愉！</p>
+                    <p class="signature">FunkyGames 团队</p>
+                </div>
+            </div>
+
         </div>
+    </div>
 
-        <!-- Secondary Banner -->
-        <div class="max-w-md mx-auto rounded-xl overflow-hidden opacity-90 hover:opacity-100 transition-opacity duration-500 shadow-xl border border-amber-500/20 bg-gradient-to-b from-red-900/40 to-amber-950/40 p-6">
-            <p class="text-amber-200/95 font-semibold tracking-wide">Happy Chinese New Year 2026</p>
-            <p class="chinese-title text-3xl text-amber-400 gold-glow mt-2">福</p>
-            <p class="text-amber-200/70 text-sm mt-1">农历新年快乐 · 恭喜发财</p>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="relative z-10 py-10 text-amber-700/80 text-xs tracking-widest uppercase">
-        &copy; 2026 · Lunar New Year · 新春贺岁 · 恭喜发财
+    <footer>
+        &copy; 2026 FunkyGames. All rights reserved. | business@funkygamesltd.com
     </footer>
 
-    <!-- Lantern & Coin Fall Script -->
-    <style>
-        @keyframes fall-cny {
-            from { top: -30px; transform: translateX(0); }
-            to { top: 110vh; transform: translateX(var(--drift, 0)); }
-        }
-    </style>
-    <script>
-        const container = document.getElementById('lanterns');
-        const types = ['lantern', 'coin'];
-
-        function createParticle() {
-            const type = types[Math.random() > 0.5 ? 0 : 1];
-            const el = document.createElement('div');
-            const left = Math.random() * 100 + 'vw';
-            const duration = Math.random() * 4 + 4 + 's';
-            const delay = Math.random() * 2 + 's';
-            const drift = (Math.random() * 60 - 30) + 'px';
-            const size = type === 'lantern' ? 1 : (Math.random() * 0.5 + 0.8);
-
-            if (type === 'lantern') {
-                el.className = 'lantern';
-                el.style.left = left;
-            } else {
-                el.className = 'coin';
-                el.textContent = '吉';
-                el.style.left = left;
-                el.style.fontSize = (10 * size) + 'px';
-                el.style.width = (14 * size) + 'px';
-                el.style.height = (14 * size) + 'px';
-            }
-
-            el.style.position = 'absolute';
-            el.style.top = '-30px';
-            el.style.opacity = Math.random() * 0.5 + 0.4;
-            el.style.pointerEvents = 'none';
-            el.style.setProperty('--drift', drift);
-            el.style.animation = `fall-cny linear ${duration} ${delay} forwards`;
-            container.appendChild(el);
-
-            setTimeout(() => el.remove(), (parseFloat(duration) + parseFloat(delay)) * 1000 + 500);
-        }
-
-        setInterval(createParticle, 200);
-    </script>
 </body>
 </html>
